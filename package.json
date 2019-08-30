@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "dev": "tsdx watch",
-    "dist": "trash dist && npm run prettier-production && npm run test-coverage && tsdx build",
+    "dist": "trash dist && npm run prettier-production && npm run test && tsdx build",
     "test": "trash coverage && tsdx test --coverage",
     "test-watch": "tsdx test --watchAll",
     "lint": "tsdx lint",
