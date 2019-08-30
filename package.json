@@ -1,6 +1,21 @@
 {
   "name": "fit-box",
   "version": "1.0.0",
+  "description": "Fits a box within a boundary while keeping its original aspect ratio",
+  "keywords": [
+    "geometry",
+    "rectangles",
+    "boxes",
+    "fit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christianhg/fit-box.git"
+  },
+  "author": "Christian Hamburger Grøngaard <christianhg@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/christianhg/fit-box",
+  "bugs": "https://github.com/christianhg/fit-box/issues",
   "main": "dist/index.js",
   "module": "dist/fit-box.esm.js",
   "typings": "dist/index.d.ts",
