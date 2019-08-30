@@ -8,7 +8,15 @@
 [![Dependencies](https://david-dm.org/christianhg/fit-box.svg)](https://david-dm.org/christianhg/fit-box)
 [![devDependencies Status](https://david-dm.org/christianhg/fit-box/dev-status.svg)](https://david-dm.org/christianhg/fit-box?type=dev)
 
+The box will either be scaled up or scaled down within the boundary:
+
 ```js
+fitBox({
+  boundary: { width: 400, height: 300 },
+  box: { width: 20, height: 60 },
+});
+// => { width: 100, height: 300 }
+
 fitBox({
   boundary: { width: 400, height: 300 },
   box: { width: 1280, height: 760 },
