@@ -1,6 +1,6 @@
 {
   "name": "fit-box",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fits a box within a boundary while keeping its original aspect ratio",
   "keywords": [
     "geometry",
