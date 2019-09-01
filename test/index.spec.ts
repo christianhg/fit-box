@@ -1,7 +1,8 @@
+import { createBoxGenerator } from 'box-generator';
 import { fitBox } from '../src';
 import { aspectRatio } from '../src/util';
-import { createBoxGenerator } from 'box-generator';
 import { contains } from './contains';
+import { equalFloats } from './equal-floats';
 import { randomNumber } from './random-number';
 
 describe(fitBox.name, () => {
@@ -19,9 +20,9 @@ describe(fitBox.name, () => {
       for (let boundary of boundaries) {
         const fittedBox = fitBox({ boundary, box });
 
-        expect(aspectRatio(fittedBox).toFixed(2)).toBe(
-          aspectRatio(box).toFixed(2)
-        );
+        expect(
+          equalFloats(aspectRatio(fittedBox), aspectRatio(box))
+        ).toBeTruthy();
 
         expect(contains({ boundary, box: fittedBox })).toBeTruthy();
       }
