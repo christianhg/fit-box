@@ -3,10 +3,6 @@
 > Fits a box within a boundary while keeping its original aspect ratio.
 
 [![npm module](https://badge.fury.io/js/fit-box.svg)](https://www.npmjs.org/package/fit-box)
-[![Coverage Status](https://coveralls.io/repos/github/christianhg/fit-box/badge.svg?branch=master)](https://coveralls.io/github/christianhg/fit-box?branch=master)
-[![Build Status](https://travis-ci.org/christianhg/fit-box.svg?branch=master)](https://travis-ci.org/christianhg/fit-box)
-[![Dependencies](https://david-dm.org/christianhg/fit-box.svg)](https://david-dm.org/christianhg/fit-box)
-[![devDependencies Status](https://david-dm.org/christianhg/fit-box/dev-status.svg)](https://david-dm.org/christianhg/fit-box?type=dev)
 
 The box will either be scaled up or scaled down within the boundary:
 
