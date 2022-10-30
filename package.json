@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "dev": "tsdx watch",
-    "dist": "trash dist && npm run prettier-production && npm run test && tsdx build --format esm,cjs,umd --name fitBox",
+    "dist": "trash dist && npm run prettier-production && npm run test && tsdx build --format esm,cjs,umd --name fit-box",
     "test": "trash coverage && tsdx test --coverage",
     "test-watch": "tsdx test --watchAll",
     "lint": "tsdx lint",
