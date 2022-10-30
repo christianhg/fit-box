@@ -1,4 +1,5 @@
 import { createBoxGenerator } from 'box-generator';
+import { describe, expect, it } from 'vitest';
 import { fitBox } from '../src';
 import { aspectRatio } from '../src/util';
 import { contains } from './contains';

@@ -16,45 +16,26 @@
   "license": "MIT",
   "homepage": "https://github.com/christianhg/fit-box",
   "bugs": "https://github.com/christianhg/fit-box/issues",
-  "main": "dist/index.js",
-  "module": "dist/fit-box.esm.js",
-  "typings": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist/**"
   ],
   "scripts": {
-    "dev": "tsdx watch",
-    "dist": "trash dist && npm run prettier-production && npm run test && tsdx build --format esm,cjs,umd --name fit-box",
-    "test": "trash coverage && tsdx test --coverage",
-    "test-watch": "tsdx test --watchAll",
-    "lint": "tsdx lint",
-    "prettier": "prettier --write \"{**/*,*}.{md,ts}\"",
-    "prettier-production": "prettier --list-different \"{**/*,*}.{md,ts}\"",
-    "prettier-staged": "pretty-quick --staged --pattern \"{**/*,*}.{md,ts}\"",
-    "coveralls": "cat ./coverage/lcov.info | coveralls"
-  },
-  "peerDependencies": {},
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
+    "build": "npm run test && npm run format:check && tsup ./src/index.ts --format esm,cjs --dts --minify",
+    "dev": "tsup ./src/index.ts --format esm,cjs --watch --dts",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest watch",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@types/jest": "^29.2.0",
+    "@vitest/coverage-c8": "^0.24.3",
     "box-generator": "^2.0.0",
-    "coveralls": "^3.1.1",
-    "husky": "^8.0.1",
     "prettier": "^2.7.1",
-    "pretty-quick": "^3.1.3",
-    "trash-cli": "^5.0.0",
-    "tsdx": "^0.14.1",
-    "tslib": "^2.4.0",
-    "typescript": "^4.8.4"
+    "tsup": "^6.3.0",
+    "typescript": "^4.8.4",
+    "vitest": "^0.24.3"
   }
 }
